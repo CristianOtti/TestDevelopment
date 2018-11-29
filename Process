@@ -1,0 +1,31 @@
+import java.io.*;
+import java.lang.Scanner;
+
+Public class Process{
+  Public static void main(String[] args)throws Exception{
+     string a,b="";
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Please type your first choise");
+     a=sc.nextline();
+     System.out.println("Please type your last choise");
+     b=sc.nextline();
+     Methode met=new Methode(a,b);
+     System.out.println(met);
+  }
+}
+Public class Methode{
+ private string val1,val2,message="";
+ private int res=0;
+ public Methode(string input, string pull){
+   val1=input;val2=pull;
+   res=val1.compareTo(val2);
+   if(res==0){message="Both are the same";
+   }else if(res>0){message=val1+" is greater than "+val2;
+   }else{
+     message=val2+" is less than "+val1;
+   }
+ }
+ public string toString(){
+   return message;
+ }
+}
